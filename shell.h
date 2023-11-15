@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int shell_1(int agc, char **agv);
+int shell_1(int agc, char **agv, char **env);
 char *empty_line(char *store, char **agv);
 int exit_shell(char **argv);
 char **_env(char **argv, char **env);
