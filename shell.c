@@ -36,9 +36,10 @@ int main(int argc, char **agv, char **env)
 	_stat(st, argv, bin, tok, store);
 	if (stat(argv[0], &st) == -1)
 	{
-	printf("%s: No such file or directory\n", store);
+	printf("%s: No such file or directory\n", agv[0]);
 	continue;
 	}
+	if (stat(argv[0], &st) == 0)
 	child_pid = fork();
 	if (child_pid == 0)
 	execve(argv[0], argv, env);
